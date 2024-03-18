@@ -1,0 +1,26 @@
+.Table{
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table{
+    width: 50%;
+    border: 0.5px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+th,td{
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even)
+ {
+    background-color: #f2f2f2;
+}
+
+
