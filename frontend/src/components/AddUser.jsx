@@ -34,7 +34,7 @@ const AddUser = () => {
             <input type="text"  placeholder='Enter Email' value={email} onChange={inputChange} name="email"/>
       </div>
       <div className="inputs">
-           <input type="text"  placeholder='Enter Name' value={mobile} onChange={inputChange} name="mobile"/>
+           <input type="text"  placeholder='Enter Mobile' value={mobile} onChange={inputChange} name="mobile"/>
       </div>
       <div className="submitbtn">
             <button type="submit" onClick={handleSubmit}>Submit</button>
