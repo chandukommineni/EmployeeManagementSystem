@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin
@@ -18,6 +19,11 @@ public class EmployeeController {
         return service.getDetails();
     }
 
+    @GetMapping("/emp/{id}")
+    public ResponseEntity<Optional<EmployeeModel>> getData(@PathVariable int id){
+
+        return service.getDetailsById(id);
+    }
     @PostMapping("emp")
     public ResponseEntity<EmployeeModel> setData(@RequestBody EmployeeModel obj){
         return service.setDetails(obj);

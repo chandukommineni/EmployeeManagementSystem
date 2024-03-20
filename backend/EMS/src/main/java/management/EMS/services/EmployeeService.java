@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Constructor;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeService {
@@ -16,6 +17,11 @@ public class EmployeeService {
     employeeRepository repo;
     public ResponseEntity<List<EmployeeModel>> getDetails(){
         return new ResponseEntity<>(repo.findAll(), HttpStatus.OK);
+    }
+
+    public ResponseEntity<Optional<EmployeeModel>> getDetailsById(int id){
+        Optional<EmployeeModel> obj=repo.findById(id);
+        return new ResponseEntity<>(obj,HttpStatus.OK);
     }
 
     public ResponseEntity<EmployeeModel> deleteDetails(int id){
